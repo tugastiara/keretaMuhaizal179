@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documnet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+        <h1>Selamat Datang di Honex Kereta</h1>
+            <p>Anda dapat melakukan pemesanan tiket kereta api online dengan mudah</p>
+        <h1>Cari Tiket Kereta</h1>
+        <form method="post" action="/kereta">
+            <div class="data">
+                <label for="stasiun_asal">Stasiun Asal:</label>
+                <h3><input type="text" name="stasiun_asal" id="stasiun_asal"
+                placeholder="Stasiun Asal" required></h3>
+
+                <label for="stasiun_tujuan">Stasiun Tujuan:</label>
+                <h3><input type="text" name="stasiun_tujuan" id="stasiun_tujuan" 
+                placeholder="Stasiun Tujuan" required></h3>
+            
+                <label for="tanggal_berangkat">Tanggal Berangkat:</label>
+                <h3><input type="text" name="tanggal_berangkat" id="tanggal_berangkat" 
+                placeholder="Tanggal Berangkat" required></h3>
+            
+                <label for="tanggal_tiba">Tanggal Tiba:</label>
+                <h3><input type="text" name="tanggal_tiba" id="tanggal_tiba"
+                 placeholder="Tanggal Tiba" required></h3>
+
+            <button type="submit">Cari Tiket</button></div>
+        </form>
+
+        {% if data %}
+        <h2>Hasil Pencarian Tiket:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Kereta</th>
+                    <th>Tanggal Berangkat</th>
+                    <th>Tanggal Tiba</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ item['Nama Kereta'] }}</td>
+                    <td>{{ item['Tanggal Berangkat'] }}</td>
+                    <td>{{ item['Tanggal Tiba'] }}</td>
+                    <td><a href="pembayaran"><button>Pesan</button></a></td></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+</body>
+</html>

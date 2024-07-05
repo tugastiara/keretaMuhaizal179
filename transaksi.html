@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class ='transaksi'>
+    <form method="post">
+    <h2>Detail Transaksi</h2>
+    <p>nama_kereta: {{ nama_kereta }}</p>
+    <p>stasiun_asal: {{ stasiun_asal }}</p>
+    <p>stasiun_tujuan: {{ stasiun_tujuan }}</p>
+    <p>harga_per_tiket: {{ harga_per_tiket }}</p>
+    <p>jumlahpenumpang: {{ jumlahpenumpang }}</p>
+    <p>metode_pembayaran: {{ metode_pembayaran }}</p>
+    <a href="/">Kembali ke Halaman Awal</a>
+    </div>
+</body>
+</html>

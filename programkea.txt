@@ -1,0 +1,4 @@
+@echo off
+echo ini adalah file bat yang saya buat program
+
+cmd/k"D:\tugas6\myenv\Scripts\activate.bat"

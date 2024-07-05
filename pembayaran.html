@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body></h2>
+    <form method="post">
+        <div class="kotak">
+            <label for="nama_kereta">nama_kereta:</label>
+            <input type="text" name="nama_kereta" id="nama_kereta" placeholder="nama_kereta">
+
+            <label for="stasiun_asal">stasuin_asal:</label>
+            <input type="text" name="stasiun_asal" id="stasiun_asal" placeholder="stasiun_asal">
+            
+            <label for="stasiun_tujuan">stasiun_tujuan:</label>
+            <input type="stasiun_tujuan" name="stasiun_tujuan" id="stasiun_tujuan" placeholder="stasiun_tujuan">
+            
+            <label for="harga_per_tiket">harga_per_tiket</label>
+            <input type="text" name="harga_per_tiket" id="harga_per_tiket" placeholder="harga_per_tiket">
+
+            <label for="jumlahpenumpang">jumlahpenumpang:</label>
+            <select name="jumlahpenumpang" id="jumlahpenumpang">
+                <option value="pilih hari">Pilih Hari</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <label for="metode_pembayaran">Pilih Metode Pembayaran:</label>
+            <select name="metode_pembayaran" id="metode_pembayaran">
+                <option value="kartu_kredit">Kartu Kredit</option>
+                <option value="e_wallet">E-Wallet</option>
+                <optgroup label="Transfer Bank">
+                    <option value="bca">BCA</option>
+                    <option value="mandiri">Mandiri</option>
+                    <option value="bni">BNI</option>
+                </optgroup>
+            </select>
+
+        
+        <button type="submit" name="action" value="selanjutnya">Selanjutnya</button>
+        <button type="submit" name="action" value="batal">Batal</button>
+    </form>
+    </div>
+</body>
+</html>
